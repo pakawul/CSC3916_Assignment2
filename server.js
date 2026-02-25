@@ -4,6 +4,7 @@ File: Server.js
 Description: Web API scaffolding for Movie API
  */
 
+require("dotenv").config();
 var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
@@ -13,6 +14,7 @@ var authJwtController = require('./auth_jwt');
 db = require('./db')(); //hack
 var jwt = require('jsonwebtoken');
 var cors = require('cors');
+
 
 var app = express();
 app.use(cors());
